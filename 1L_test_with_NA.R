@@ -3,10 +3,7 @@
 
 #' this version is able to handle missing values in DNA data
 
-# set the directory
-setwd("~/Dropbox/Jeffery He/iResearch/Publications/2017/HE2019-1L-WFD-SolveKBE-Horse-MBE")
-
-source("./Code/Code v1.2/HE2017_rfun.R")
+source("1L_rfun_with_NA.R")
 
 #install.packages("RColorBrewer")
 library("RColorBrewer")
@@ -91,11 +88,11 @@ for (i in 1:sim_num) {
 }
 
 save(sel_cof, sel_cof, pop_siz, int_ale_frq, int_gen, lst_gen, ptn_num, sim_num, sim_ale_frq_WFM, sim_ale_frq_WFD, 
-     file = "./Output/Output v1.2/TEST_1L_comparison_WFM_and_WFD.rda")
+     file = "TEST_1L_comparison_WFM_and_WFD.rda")
 
-load("./Output/Output v1.2/TEST_1L_comparison_WFM_and_WFD.rda")
+load("TEST_1L_comparison_WFM_and_WFD.rda")
 
-pdf(file = "./Output/Output v1.2/TEST_1L_comparison_WFM_and_WFD.pdf", width = 20, height = 10)
+pdf(file = "TEST_1L_comparison_WFM_and_WFD.pdf", width = 20, height = 10)
 par(mar = c(5.5, 5, 5.5, 2.5), cex.main = 2, cex.sub = 1.75, cex.axis = 1.75, cex.lab = 1.75)
 hist(sim_ale_frq_WFM, breaks = seq(min(sim_ale_frq_WFM, sim_ale_frq_WFD), max(sim_ale_frq_WFM, sim_ale_frq_WFD), length.out = 50), freq = FALSE, col = rgb(0.1, 0.1, 0.1, 0.5), 
      xlim = c(min(sim_ale_frq_WFM, sim_ale_frq_WFD), max(sim_ale_frq_WFM, sim_ale_frq_WFD)), 
@@ -200,11 +197,11 @@ smp_ale_frq <- sim_HMM_WFM$smp_ale_cnt / sim_HMM_WFM$smp_chr_cnt
 pop_ale_frq <- sim_HMM_WFM$pop_ale_frq
 
 save(sel_cof, dom_par, pop_siz, int_gen, smp_gen, smp_chr_cnt, smp_ale_cnt, mis_ale_cnt, smp_ale_frq, pop_ale_frq, 
-     file = "./Output/Output v1.2/TEST_1L_simulated_dataset.rda")
+     file = "TEST_1L_simulated_dataset.rda")
 
-load("./Output/Output v1.2/TEST_1L_simulated_dataset.rda")
+load("TEST_1L_simulated_dataset.rda")
 
-pdf(file = "./Output/Output v1.2/TEST_1L_simulated_dataset.pdf", width = 10, height = 10)
+pdf(file = "TEST_1L_simulated_dataset.pdf", width = 10, height = 10)
 par(mar = c(5.5, 5, 5.5, 2.5), cex.main = 2, cex.sub = 1.75, cex.axis = 1.75, cex.lab = 1.75)
 k <- min(int_gen, smp_gen):max(int_gen, smp_gen)
 plot(k, pop_ale_frq, type = 'l', lwd = 1.5, 
