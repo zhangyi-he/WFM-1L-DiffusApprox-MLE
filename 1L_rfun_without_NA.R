@@ -17,7 +17,7 @@ library("compiler")
 #enableJIT(1)
 
 # call C++ functions
-sourceCpp("./Code/Code v1.1/HE2017_cfun.cpp")
+sourceCpp("1L_cfun_without_NA.cpp")
 
 ################################################################################
 
