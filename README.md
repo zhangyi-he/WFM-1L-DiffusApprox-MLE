@@ -1,5 +1,5 @@
 # Maximum likelihood estimation of natural selection and allele age from time series data of allele frequencies
-Source code is implemented for a likelihood-based method for inferring natural selection and allele age from time series data of allele frequencies, and the preprint is available at https://www.biorxiv.org/content/10.1101/837310v3.
+Source code is implemented for a likelihood-based method for inferring natural selection and allele age from time series data of allele frequencies, and the article has been published in Genetics available at https://www.genetics.org/content/216/2/463.
 
 v1.0 includes the source code implemented for the case of constant demographies.
 
